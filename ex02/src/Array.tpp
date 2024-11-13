@@ -3,14 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daparici <daparici@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 19:57:45 by daparici          #+#    #+#             */
-/*   Updated: 2024/11/13 20:14:12 by daparici         ###   ########.fr       */
+/*   Updated: 2024/11/14 00:40:28 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Array.hpp"
 
+// Constructores
+template <typename T>
+Array<T>::Array() : _array(nullptr), _size(0)
+{
+    std::cout << "Array default constructor (nullptr, 0) called." << std::endl;
+}
+
+// Constructor con tamaño: crea un array de tamaño n
+template <typename T>
+Array<T>::Array(unsigned int n) : _array(new T[n]), _size(n)
+{
+    std::cout << "Array constructor with size (" << n << ") called." << std::endl;
+}
+
+// Constructor de copia
+template <typename T>
+Array<T>::Array(const Array &src) : _array(new T[src._size]), _size(src._size)
+{
+    std::cout << "Array copy constructor called." << std::endl;
+    
+    for (unsigned int i = 0; i < _size; i++)
+        _array[i] = src._array[i];
+}
 
 
 
