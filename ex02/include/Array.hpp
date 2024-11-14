@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daparici <daparici@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 19:57:36 by daparici          #+#    #+#             */
-/*   Updated: 2024/11/13 20:15:57 by daparici         ###   ########.fr       */
+/*   Updated: 2024/11/14 01:49:57 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #include <string>
 #include <exception>  // For std::exception
 #include <stdexcept>  // For std::exception
-
-#include "../src/Array.tpp"  // Implementación de la plantilla
 
 template <typename T>
 class Array
@@ -41,11 +39,14 @@ class Array
         Array &operator=(const Array &rhs);
 
         // Operador de acceso
-        T &operator[](unsigned int i);
+        T &operator[](unsigned int index);
 
         // Métodos
         unsigned int size() const;
 };
+
+#include "../src/Array.tpp"  // Implementación de la plantilla
+
 
 /*	Las plantillas deben ser completamente visibles para el compilador en el momento en que se utilizan.
 	A diferencia de las funciones no plantilla, donde puedes separar la declaración en el archivo de cabecera (.hpp) 

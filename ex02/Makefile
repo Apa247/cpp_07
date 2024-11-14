@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+         #
+#    By: daparici <daparici@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 19:43:09 by daparici          #+#    #+#              #
-#    Updated: 2024/11/13 19:43:13 by daparici         ###   ########.fr        #
+#    Updated: 2024/11/14 01:46:31 by daparici         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 			=	iter
+NAME 			=	array
 
 vpath                   %.hpp include
 vpath                   %.cpp src
